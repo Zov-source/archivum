@@ -115,6 +115,29 @@
 <footer class="site-footer">
   ARCHIVUM / PRIVATE COLLECTION
 </footer>
+  
+<script>
+const images = [
+  "images/character-001.jpg",
+  "images/character-001-2.jpg",
+  "images/character-001-3.jpg"
+];
 
+let currentImage = 0;
+
+function changeImage(direction) {
+  currentImage += direction;
+
+  if (currentImage < 0) {
+    currentImage = images.length - 1;
+  }
+
+  if (currentImage >= images.length) {
+    currentImage = 0;
+  }
+
+  document.getElementById("character-image").src = images[currentImage];
+}
+</script>
 </body>
 </html>
