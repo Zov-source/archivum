@@ -398,17 +398,26 @@ img {
   display: block;
 }
 
+
 .gallery-button {
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--line);
-  background: #111012;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 100%;
+  min-height: 100px;
+  border: none;
+  background: transparent;
   color: var(--paper);
   font-family: serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 400;
   cursor: pointer;
+  padding: 0;
 }
+
+.gallery-button:hover {
+  color: var(--paper-dark);
+}
+
 
 .gallery-button:hover {
   background: #211d20;
