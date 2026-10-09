@@ -195,8 +195,8 @@ img {
 
 .character-content {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) 1.1fr;
-  gap: 60px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 35px;
   padding: 70px 0;
 }
 
