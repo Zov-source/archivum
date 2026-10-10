@@ -440,3 +440,28 @@ img {
     padding: 10px;
   }
 }
+/* Character Introduction */
+.character-introduction {
+  margin-top: 35px;
+  padding: 22px 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.introduction-label {
+  margin-bottom: 16px;
+  color: var(--silver);
+  font-family: serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+
+.character-introduction p {
+  margin: 0;
+  color: var(--paper-dark);
+  font-size: 0.9rem;
+  line-height: 2.2;
+  letter-spacing: 0.04em;
+  white-space: pre-line;
+}
