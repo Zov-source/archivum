@@ -465,3 +465,10 @@ img {
   letter-spacing: 0.04em;
   white-space: pre-line;
 }
+.profile-table {
+  border-bottom: none;
+}
+
+.character-introduction {
+  margin-top: 0;
+}
