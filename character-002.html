@@ -1,54 +1,55 @@
-<\!DOCTYPE html\>
-<html lang="ja"\>
-<head\>
-  <meta charset="UTF\-8"\>
-  <meta name="viewport" content="width=device\-width, initial\-scale=1\.0"\>
-  <title\>Alwin — ARCHIVUM</title\>
-  <link rel="stylesheet" href="css/style\.css"\>
-</head\>
-<body\>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alwin Kreuz — ARCHIVUM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<header class="character\-header"\>
-  <div class="container"\>
-    <div class="character\-number"\>SPECIMEN A\-002 / HUMAN</div\>
-  </div\>
-</header\>
+<header class="character-header">
+  <div class="container">
+    <div class="character-number">SPECIMEN A-002 / HUMAN</div>
+  </div>
+</header>
 
-<main class="container"\>
-  <section class="character\-content"\>
+<main class="container">
+  <section class="character-content">
 
-    <\!\-\- Character Images \-\-\>
-    <div class="character\-gallery"\>
-      <button class="gallery\-button gallery\-prev"
-        onclick="changeImage&#40;\-1&#41;" aria\-label="前の画像"\>
+    <!-- Character Images -->
+    <div class="character-gallery">
+      <button class="gallery-button gallery-prev"
+        onclick="changeImage(-1)" aria-label="前の画像">
         &lt;
-      </button\>
+      </button>
 
-      <div class="gallery\-image"\>
+      <div class="gallery-image">
         <img
-          id="character\-image"
-          src="character\-002\.jpg"
+          id="character-image"
+          src="character-002.jpg"
           alt="Alwin Kreuz"
-        \>
-      </div\>
+        >
+      </div>
 
-      <button class="gallery\-button gallery\-next"
-        onclick="changeImage&#40;1&#41;" aria\-label="次の画像"\>
+      <button class="gallery-button gallery-next"
+        onclick="changeImage(1)" aria-label="次の画像">
         &gt;
-      </button\>
-    </div\>
+      </button>
+    </div>
 
-    <\!\-\- Character Profile \-\-\>
-    <div class="character\-record"\>
+    <!-- Character Profile -->
+    <div class="character-record">
 
-      <h1 class="character\-title"\>Alwin</h1\>
+      <h1 class="character-title">Alwin</h1>
 
-      <div class="tags"\>
-        <span class="tag"\>\#HUMAN</span\>
-        <span class="tag"\>\#MALE</span\>
-        <span class="tag"\>\#うちよそ</span\>
-      </div\>
-<div class="profile-table">
+      <div class="tags">
+        <span class="tag">#HUMAN</span>
+        <span class="tag">#MALE</span>
+        <span class="tag">#うちよそ</span>
+      </div>
+
+      <div class="profile-table">
 
   <div class="profile-row">
     <span class="profile-label">Name</span>
@@ -109,3 +110,63 @@
   </div>
 
 </div>
+
+      <!-- Character Description -->
+      <div class="character-introduction">
+        <div class="introduction-label">
+          RECORD / DESCRIPTION
+        </div>
+        <p>潔癖症で神経質な研究者で、アネラの担当医。出来の悪い実験体であるアネラをなぜか気に入り、恋人としてそばに置いている。
+
+手先が器用で、アネラの身体のツギハギは彼が縫ったもの。潔癖症にもかかわらず、傷の手当てだけは自ら行う。</p>
+      </div>
+
+      <!-- Three Color Swatches -->
+      <div class="color-palette">
+        <span style="background:#111012;"></span>
+        <span style="background:#5a1d24;"></span>
+        <span style="background:#777277;"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <a href="index.html" class="back-index">
+    BACK TO INDEX
+  </a>
+
+</main>
+
+<footer class="site-footer">
+  ARCHIVUM / PRIVATE COLLECTION
+</footer>
+
+<script>
+const images = [
+  "character-002.jpg",
+  "character-002-2.jpg",
+  "character-002-3.jpg",
+  "character-002-4.jpg",
+  "character-002-5.jpg"
+];
+
+let currentImage = 0;
+
+function changeImage(direction) {
+  currentImage += direction;
+
+  if (currentImage < 0) {
+    currentImage = images.length - 1;
+  }
+
+  if (currentImage >= images.length) {
+    currentImage = 0;
+  }
+
+  document.getElementById("character-image").src =
+    images[currentImage];
+}
+</script>
+
+</body>
+</html>
