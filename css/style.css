@@ -465,10 +465,8 @@ img {
   letter-spacing: 0.04em;
   white-space: pre-line;
 }
-.profile-table {
-  border-bottom: none;
-}
-
+/* Remove duplicate line above RECORD */
 .character-introduction {
   margin-top: 0;
+  border-top: none;
 }
