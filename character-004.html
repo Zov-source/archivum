@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,9 +11,7 @@
 
 <header class="character-header">
   <div class="container">
-    <p class="site-subtitle">PRIVATE CHARACTER ARCHIVE</p>
-    <p class="character-number">SPECIMEN A-004</p>
-    <h1 class="character-title">Neptus</h1>
+    <div class="character-number">SPECIMEN A-004</div>
   </div>
 </header>
 
@@ -24,99 +21,97 @@
 
     <div class="character-gallery">
 
-      <button class="gallery-button" type="button"
-        onclick="changeImage(-1)" aria-label="Previous image">‹</button>
+      <button class="gallery-button gallery-prev" onclick="changeImage(-1)">
+        &lt;
+      </button>
 
       <div class="gallery-image">
         <img id="character-image" src="character-004.jpg" alt="Neptus">
       </div>
 
-      <button class="gallery-button" type="button"
-        onclick="changeImage(1)" aria-label="Next image">›</button>
+      <button class="gallery-button gallery-next" onclick="changeImage(1)">
+        &gt;
+      </button>
 
     </div>
 
     <div class="character-record">
 
-      <h2 class="character-title">Neptus</h2>
+      <h1 class="character-title">Neptus</h1>
 
       <div class="profile-table">
 
         <div class="profile-row">
-  <span class="profile-label">Name</span>
-  <span class="profile-value">
-    Neptus<br>
-    <span style="color: var(--paper-dark); font-size: 0.75rem;">ネプトゥス</span>
-  </span>
-</div>
-
-        <div class="profile-row">
-          <div class="profile-label">Age</div>
-          <div class="profile-value">4.6 billion years</div>
+          <span class="profile-label">Name</span>
+          <span class="profile-value">
+            Neptus<br>
+            <span style="color: var(--paper-dark); font-size: 0.75rem;">ネプトゥス</span>
+          </span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Gender</div>
-          <div class="profile-value">Other</div>
+          <span class="profile-label">Age</span>
+          <span class="profile-value">4.6 billion years</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Height</div>
-          <div class="profile-value">192 cm</div>
+          <span class="profile-label">Gender</span>
+          <span class="profile-value">Other</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Weight</div>
-          <div class="profile-value">1.024 × 10²⁶ kg</div>
+          <span class="profile-label">Height</span>
+          <span class="profile-value">192 cm</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Species</div>
-          <div class="profile-value">Planet</div>
+          <span class="profile-label">Weight</span>
+          <span class="profile-value">1.024 × 10²⁶ kg</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Occupation</div>
-          <div class="profile-value">Neptune</div>
+          <span class="profile-label">Species</span>
+          <span class="profile-value">Planet</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Birthday</div>
-          <div class="profile-value">09 / 23</div>
+          <span class="profile-label">Occupation</span>
+          <span class="profile-value">Neptune</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Personality</div>
-          <div class="profile-value">Mysterious and elusive</div>
+          <span class="profile-label">Birthday</span>
+          <span class="profile-value">09 / 23</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Like</div>
-          <div class="profile-value">The Deep Sea, Silence</div>
+          <span class="profile-label">Personality</span>
+          <span class="profile-value">Mysterious and elusive.</span>
         </div>
 
         <div class="profile-row">
-          <div class="profile-label">Dislike</div>
-          <div class="profile-value">Interference, Boredom</div>
+          <span class="profile-label">Like</span>
+          <span class="profile-value">The Deep Sea, Silence.</span>
         </div>
 
-      </div>
+        <div class="profile-row">
+          <span class="profile-label">Dislike</span>
+          <span class="profile-value">Interference, Boredom.</span>
+        </div>
 
-      <div class="character-introduction">
-        <div class="introduction-label">RECORD / DESCRIPTION</div>
-        <p>海王星。穏やかな微笑みの裏に何を隠しているのか、知る者はいない。他者との関わりに執着せず、悠久の時を深い青の静寂の中で過ごしている。</p>
+        <div class="character-introduction">
+          <div class="introduction-label">RECORD / DESCRIPTION</div>
+          <p>
+            海王星。穏やかな微笑みの裏に何を隠しているのか、知る者はいない。他者との関わりに執着せず、悠久の時を深い青の静寂の中で過ごしている。
+          </p>
+        </div>
+
       </div>
 
       <div class="color-palette">
-        <span style="background:#173B70;" title="Deep Blue"></span>
-        <span style="background:#397FAD;" title="Neptune Blue"></span>
-        <span style="background:#0B1426;" title="Abyssal Navy"></span>
-      </div>
-
-      <div class="tags" style="margin-top:30px;">
-        <span class="tag">#Non-human</span>
-        <span class="tag">#OTHER</span>
-        <span class="tag">#うちよそ</span>
+        <span style="background:#6885A2;"></span>
+        <span style="background:#6885A2;"></span>
+        <span style="background:#6CA4B8;"></span>
       </div>
 
     </div>
@@ -143,11 +138,19 @@ const images = [
 let currentImage = 0;
 
 function changeImage(direction) {
-  currentImage = (currentImage + direction + images.length) % images.length;
+  currentImage += direction;
+
+  if (currentImage < 0) {
+    currentImage = images.length - 1;
+  }
+
+  if (currentImage >= images.length) {
+    currentImage = 0;
+  }
+
   document.getElementById("character-image").src = images[currentImage];
 }
 </script>
 
 </body>
 </html>
-
