@@ -1,1 +1,151 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neptus — ARCHIVUM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="character-header">
+  <div class="container">
+    <p class="site-subtitle">PRIVATE CHARACTER ARCHIVE</p>
+    <p class="character-number">SPECIMEN A-004</p>
+    <h1 class="character-title">Neptus</h1>
+    <p class="site-subtitle">ネプトゥス</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="character-content">
+
+    <div class="character-gallery">
+
+      <button class="gallery-button" type="button"
+        onclick="changeImage(-1)" aria-label="Previous image">‹</button>
+
+      <div class="gallery-image">
+        <img id="character-image" src="character-004.jpg" alt="Neptus">
+      </div>
+
+      <button class="gallery-button" type="button"
+        onclick="changeImage(1)" aria-label="Next image">›</button>
+
+    </div>
+
+    <div class="character-record">
+
+      <h2 class="character-title">Neptus</h2>
+
+      <div class="profile-table">
+
+        <div class="profile-row">
+          <div class="profile-label">Name</div>
+          <div class="profile-value">Neptus（ネプトゥス）</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Age</div>
+          <div class="profile-value">4.6 billion years</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Gender</div>
+          <div class="profile-value">Other</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Height</div>
+          <div class="profile-value">192 cm</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Weight</div>
+          <div class="profile-value">1.024 × 10²⁶ kg</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Species</div>
+          <div class="profile-value">Planet</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Occupation</div>
+          <div class="profile-value">Neptune</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Birthday</div>
+          <div class="profile-value">09 / 23</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Personality</div>
+          <div class="profile-value">Mysterious and elusive</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Like</div>
+          <div class="profile-value">The Deep Sea, Silence</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-label">Dislike</div>
+          <div class="profile-value">Interference, Boredom</div>
+        </div>
+
+      </div>
+
+      <div class="character-introduction">
+        <div class="introduction-label">RECORD / DESCRIPTION</div>
+        <p>海王星。穏やかな微笑みの裏に何を隠しているのか、知る者はいない。他者との関わりに執着せず、悠久の時を深い青の静寂の中で過ごしている。</p>
+      </div>
+
+      <div class="color-palette">
+        <span style="background:#173B70;" title="Deep Blue"></span>
+        <span style="background:#397FAD;" title="Neptune Blue"></span>
+        <span style="background:#0B1426;" title="Abyssal Navy"></span>
+      </div>
+
+      <div class="tags" style="margin-top:30px;">
+        <span class="tag">#Non-human</span>
+        <span class="tag">#OTHER</span>
+        <span class="tag">#うちよそ</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <a href="index.html" class="back-index">BACK TO INDEX</a>
+
+</main>
+
+<footer class="site-footer">
+  ARCHIVUM / PRIVATE COLLECTION
+</footer>
+
+<script>
+const images = [
+  "character-004.jpg",
+  "character-004-2.jpg",
+  "character-004-3.jpg",
+  "character-004-4.jpg",
+  "character-004-5.jpg"
+];
+
+let currentImage = 0;
+
+function changeImage(direction) {
+  currentImage = (currentImage + direction + images.length) % images.length;
+  document.getElementById("character-image").src = images[currentImage];
+}
+</script>
+
+</body>
+</html>
+
