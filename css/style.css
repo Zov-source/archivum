@@ -98,11 +98,6 @@ img {
   letter-spacing: 0.18em;
 }
 
-.section-title::before {
-  content: "01 / ";
-  color: var(--silver);
-  font-size: 0.7em;
-}
 
 /* ===== Character Grid ===== */
 
